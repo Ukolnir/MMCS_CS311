@@ -25,6 +25,7 @@ namespace Main
             //Найти сумму всех целых и сумму всех вещественных в файле
             int sum_int = 0;
             double sum_double = 0;
+            int cntID = 0;
 
             do {
                 tok = scanner.yylex();
@@ -41,6 +42,8 @@ namespace Main
                     sum_int += Int32.Parse(scanner.yytext);
                 if (tok == (int)Tok.RNUM)
                     sum_double += Double.Parse(scanner.yytext);
+                if (tok == (int)Tok.LONGCOMMENT)
+                    cntID += scanner.cntID;
 
                 Console.WriteLine(scanner.TokToString((Tok)tok));
             } while (true);
@@ -53,6 +56,9 @@ namespace Main
             Console.WriteLine();
             Console.WriteLine("Task 3");
             Console.WriteLine("Sum int: {0}      Sum double: {1}",sum_int, sum_double);
+            Console.WriteLine();
+            Console.WriteLine("Task 4 ad");
+            Console.WriteLine("CntID {0}", cntID);
 
 
 

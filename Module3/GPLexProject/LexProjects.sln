@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lex1", "Lex1.csproj", "{4DD13462-DCB4-4C3E-B777-7FEA90CEA9D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPLEXv1", "..\..\..\..\..\Downloads\gplex-2f0d6fcf0ce84ca7450e4db8974ab4caa41b801b\GPLEXv1.csproj", "{440C9EA8-409C-4B1D-88B7-A2B5FFF87700}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4DD13462-DCB4-4C3E-B777-7FEA90CEA9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DD13462-DCB4-4C3E-B777-7FEA90CEA9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DD13462-DCB4-4C3E-B777-7FEA90CEA9D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440C9EA8-409C-4B1D-88B7-A2B5FFF87700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440C9EA8-409C-4B1D-88B7-A2B5FFF87700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440C9EA8-409C-4B1D-88B7-A2B5FFF87700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440C9EA8-409C-4B1D-88B7-A2B5FFF87700}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

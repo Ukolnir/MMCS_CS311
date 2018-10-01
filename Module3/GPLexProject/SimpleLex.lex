@@ -9,12 +9,17 @@ REALNUM {INTNUM}\.{INTNUM}
 ID {Alpha}{AlphaDigit}*
 DotChr [^\r\n]
 OneLineCmnt \/\/{DotChr}*
+Ap [^']
+Strap \'{Ap}*\'
 
 // Здесь можно делать описания типов, переменных и методов - они попадают в класс Scanner
 %{
   public int LexValueInt;
   public double LexValueDouble;
+  public int cntID;
 %}
+
+%x COMMENT
 
 %%
 {INTNUM} { 
@@ -55,8 +60,26 @@ cycle {
   return (int)Tok.SEMICOLON;
 }
 
-{OneLineCmnt}{
+{OneLineCmnt} {
 	return (int)Tok.STRCOMMENT;
+}
+
+{Strap} {
+	return (int)Tok.STRINAP;
+}
+
+"{" {
+  BEGIN(COMMENT);
+  cntID = 0;
+}
+
+<COMMENT>{ID} {
+  ++cntID;
+}
+
+<COMMENT> "}" { 
+  BEGIN(INITIAL);
+  return (int)Tok.LONGCOMMENT;
 }
 
 [^ \r\n] {

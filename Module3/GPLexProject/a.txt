@@ -1,6 +1,9 @@
 begin ggg : ; := 7 99.9 5 
 1 
-// ppp 
+// ppp
+'kugf'
+{kuwef
+ihdf} 
 d
 sdfgisdgf
 end
